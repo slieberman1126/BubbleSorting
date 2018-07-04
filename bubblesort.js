@@ -1,3 +1,4 @@
+// ~We're awesome
 function bubbleSort(array) {
   for (var i = array.length - 1; i > 0; i--) {
     for (var j = 0; j < i; j++) {
