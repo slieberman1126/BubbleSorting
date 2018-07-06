@@ -1,14 +1,22 @@
-function bubbleSort(array) {
-  for (var i = array.length - 1; i > 0; i--) {
-    for (var j = 0; j < i; j++) {
-      if (array[j] > array[j + 1]) {
-        var temp = array[j + 1];
-        array[j + 1] = array[j];
-        array[j] = temp;
+const bubbleSort = (arr, fn = () => {}) => {
+  for (var i = 0; i < arr.length; i++) {
+    let sorted = true;
+    for (var j = 0; j < arr.length; j++) {
+      if (typeof arr[j] !== 'undefined' && typeof arr[j + 1] !== 'undefined') {
+        fn();
+        if (arr[j] > arr[j + 1]) {
+          sorted = false;
+          const tmp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = tmp;
+        }
       }
     }
+    if (sorted) {
+      return arr;
+    }
   }
-  return array;
-}
+  return arr;
+};
 
 module.exports = bubbleSort;

@@ -8,6 +8,7 @@
     "jquery": "^3.3.1",
     "mocha": "^5.2.0",
     "npm": "^6.1.0",
+    "sinon": "^6.1.2",
     "testem": "^2.6.0"
   },
   "devDependencies": {},
